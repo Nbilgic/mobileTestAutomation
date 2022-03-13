@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="47998" started-at="2022-03-13T13:25:47 EET" finished-at="2022-03-13T13:26:35 EET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="47998" started-at="2022-03-13T13:25:47 EET" finished-at="2022-03-13T13:26:35 EET">
+      <class name="com.mycompany.app.AppTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mycompany.app.AppTest@103f852]" name="setUp" is-config="true" duration-ms="20428" started-at="2022-03-13T13:25:26 EET" finished-at="2022-03-13T13:25:47 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addItemtoCart()[pri:0, instance:com.mycompany.app.AppTest@103f852]" name="addItemtoCart" duration-ms="47706" started-at="2022-03-13T13:25:47 EET" finished-at="2022-03-13T13:26:35 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemtoCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mycompany.app.AppTest@103f852]" name="tearDown" is-config="true" duration-ms="1931" started-at="2022-03-13T13:26:36 EET" finished-at="2022-03-13T13:26:37 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mycompany.app.AppTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

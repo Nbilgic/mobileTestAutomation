@@ -1,0 +1,67 @@
+package com.mycompany.app;
+
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+
+public class AppTest extends BaseTest {
+	AppiumDriver driver;
+	private static AppiumDriverLocalService service;
+	private final String PACKAGE = "io.appium.android.apis";
+
+	@BeforeSuite
+	public void setUp() throws Exception {
+//        File classpathRoot = new File(System.getProperty("user.dir"));
+//       File appDir = new File(classpathRoot, "../apps");
+//        File app = new File(appDir.getCanonicalPath(), "ApiDemos-debug.apk");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("deviceName", "Nexus 5X API 27"); // Android Emulator
+		capabilities.setCapability("app", System.getProperty("user.dir") + "/apps/Restaurant.apk");
+		capabilities.setCapability("automationName", "UiAutomator2");
+		capabilities.setCapability("platformName", "Android");
+		// driver = new AndroidDriver(getServiceUrl(), capabilities);
+		driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
+
+	}
+
+	@AfterSuite
+	public void tearDown() {
+		driver.quit();
+	}
+
+	@Test
+    public void testFindElementsByAccessibilityId () {
+    	driver.findElement
+    	driver.findElement(MobileBy.AccessibilityId("")).click();
+    	List<WebElement> searchParametersElement = (List<WebElement>) driver.findElementsByAccessibilityId("Content");
+    	List<MobileElement> elementsOne = (List<MobileElement>) driver.findElementsByAccessibilityId("SomeAccessibilityID");
+    	MobileElement menu= ((Object) driver).findElementsByAccessibilityId("SomeAccessibilityID");
+    	WebElement linearLayoutElements = findElementsByAccessibilityId("Item1 Menu");
+   // 	Find By	            :Selector
+    //	accessibility id  : Item1 Menu
+    	
+    	
+    //	Find By         	Selector
+    
+   // 	accessibility id    Menu1
+   // 	xpath               //android.view.View[@content-desc=" Menu1"]
+    	
+    	
+    	//Find By	            Selector
+    //	accessibility id    Add Chicken to shopping cart.
+    	//xpath               //android.view.View[@content-desc="Add Chicken to shopping cart."]
+  driver.findElement(By.xpath("//android.view.View[@content-desc="Add Chicken to shopping cart."]")).click();
+    }
+
+}
